@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=JetBrains+Mono&family=Livvic&family=Noto+Emoji&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      const gray = {
+        DEFAULT: "#5b6b75",
+        50: "#e2e5e7",
+        100: "#c5cbcf",
+        200: "#aab2b8",
+        300: "#8f9aa1",
+        400: "#74828a",
+        500: "#5b6b75",
+        600: "#435560",
+        700: "#2b404b",
+        800: "#142b38",
+        900: "#001825",
+      };
+
+      const primary = {
+        DEFAULT: "#003049",
+        50: "#E9F3F5",
+        100: "#D5E8ED",
+        200: "#9DC6D1",
+        300: "#6EA5B8",
+        400: "#266580",
+        500: "#003049",
+        600: "#002942",
+        700: "#002038",
+        800: "#00162B",
+        900: "#000F21",
+        950: "#000814",
+      };
+
+      const secondary = {
+        DEFAULT: "#d62828",
+        50: "#FCF7F2",
+        100: "#FAEFE6",
+        200: "#F5D7C4",
+        300: "#F0BAA3",
+        400: "#E37562",
+        500: "#d62828",
+        600: "#C22121",
+        700: "#A11616",
+        800: "#800E0E",
+        900: "#610909",
+        950: "#3D0404",
+      };
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: (theme) => ({
+              center: true,
+              padding: {
+                DEFAULT: theme.theme("spacing.4"),
+                sm: theme.theme("spacing.5"),
+                lg: theme.theme("spacing.6"),
+                xl: theme.theme("spacing.8"),
+              },
+            }),
+            dropShadow: {
+              logo: [
+                "0 0 1px rgb(226 229 231/ 0.24)",
+                "0 4px 4px rgb(0 24 37/ 0.4)",
+              ],
+            },
+            fontFamily: {
+              sans: ["Livvic", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+              header: ["Dosis", "sans-serif"],
+              emoji: ["Noto Emoji", "sans-serif"],
+            },
+            colors: {
+              clifford: "#da373d",
+              primary: primary,
+              secondary: secondary,
+              gray: gray,
+            },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  color: theme("colors.gray.50"),
+                  h1: {
+                    fontFamily: theme("fontFamily.header"),
+                    color: theme("colors.gray.50"),
+                  },
+                  h2: {
+                    fontFamily: theme("fontFamily.header"),
+                    color: theme("colors.gray.50"),
+                  },
+                  h3: {
+                    fontFamily: theme("fontFamily.header"),
+                    color: theme("colors.gray.50"),
+                  },
+                },
+              },
+            }),
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .emoji {
+          @apply font-emoji bottom-2 relative p-0 mr-2;
+        }
+      }
+    </style>
+    <title>Angarium Project Banner</title>
+  </head>
+
+  <body
+    class="flex m-0 p-0 h-screen w-screen overflow-hidden bg-transparent text-gray-50"
+  >
+    <!-- class="flex flex-grow rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 z-20" -->
+    <div
+      class="flex flex-grow rounded-lg bg-cover bg-no-repeat bg-right z-20"
+      style="background-image: url('./gradient-bg.svg')"
+    >
+      <div
+        class="absolute z-10 rounded-lg w-full h-full bg-cover bg-no-repeat bg-right"
+        style="background-image: url('./right-bg.svg')"
+      ></div>
+      <div class="container flex content-center items-center z-30">
+        <div class="flex flex-col w-2/3 flex-wrap text-gray-50 prose-2xl">
+          <h3 class="font-mono mb-4 drop-shadow-md uppercase" id="type">
+            <span class="emoji" role="img" aria-hidden="true">️🛠️</span>Project
+          </h3>
+          <h1
+            class="font-mono mb-3 drop-shadow-md text-7xl capitalize"
+            id="name"
+          >
+            repository name
+          </h1>
+          <span class="drop-shadow-lg text-4xl" id="desc">
+            The short and sweet description of the repo.
+          </span>
+        </div>
+        <div
+          class="flex flex-col flex-wrap w-1/3 items-center overflow-hidden pl-14"
+        >
+          <img
+            class="my-4 drop-shadow-logo w-72"
+            src="https://assets.dev.angarium.io/logo/logo.png"
+            type="image/svg+xml"
+          />
+          <h3
+            class="text-gray-300 text-2xl font-header drop-shadow-md pl-8 w-72"
+          >
+            Cloud native call quality monitoring and phone testing platform
+          </h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

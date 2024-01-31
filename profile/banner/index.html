@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=JetBrains+Mono&family=Livvic&family=Noto+Emoji&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      const gray = {
+        DEFAULT: "#5b6b75",
+        50: "#e2e5e7",
+        100: "#c5cbcf",
+        200: "#aab2b8",
+        300: "#8f9aa1",
+        400: "#74828a",
+        500: "#5b6b75",
+        600: "#435560",
+        700: "#2b404b",
+        800: "#142b38",
+        900: "#001825",
+      };
+
+      const primary = {
+        DEFAULT: "#003049",
+        50: "#E9F3F5",
+        100: "#D5E8ED",
+        200: "#9DC6D1",
+        300: "#6EA5B8",
+        400: "#266580",
+        500: "#003049",
+        600: "#002942",
+        700: "#002038",
+        800: "#00162B",
+        900: "#000F21",
+        950: "#000814",
+      };
+
+      const secondary = {
+        DEFAULT: "#d62828",
+        50: "#FCF7F2",
+        100: "#FAEFE6",
+        200: "#F5D7C4",
+        300: "#F0BAA3",
+        400: "#E37562",
+        500: "#d62828",
+        600: "#C22121",
+        700: "#A11616",
+        800: "#800E0E",
+        900: "#610909",
+        950: "#3D0404",
+      };
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: (theme) => ({
+              center: true,
+              padding: {
+                DEFAULT: theme.theme("spacing.4"),
+                sm: theme.theme("spacing.5"),
+                lg: theme.theme("spacing.6"),
+                xl: theme.theme("spacing.8"),
+              },
+            }),
+            dropShadow: {
+              logo: [
+                "0 0 1px rgb(226 229 231/ 0.24)",
+                "0 4px 4px rgb(0 24 37/ 0.4)",
+              ],
+            },
+            fontFamily: {
+              sans: ["Livvic", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+              header: ["Dosis", "sans-serif"],
+              emoji: ["Noto Emoji", "sans-serif"],
+            },
+            colors: {
+              clifford: "#da373d",
+              primary: primary,
+              secondary: secondary,
+              gray: gray,
+            },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  color: theme("colors.gray.50"),
+                  h1: {
+                    fontFamily: theme("fontFamily.header"),
+                    color: theme("colors.gray.50"),
+                  },
+                  h2: {
+                    fontFamily: theme("fontFamily.header"),
+                    color: theme("colors.gray.50"),
+                  },
+                  h3: {
+                    fontFamily: theme("fontFamily.header"),
+                    color: theme("colors.gray.50"),
+                  },
+                },
+              },
+            }),
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .emoji {
+          @apply font-emoji bottom-2 relative p-0 mr-2;
+        }
+      }
+    </style>
+    <title>Angarium Profile Banner</title>
+  </head>
+
+  <body
+    class="flex m-0 p-0 h-screen w-screen overflow-hidden bg-transparent text-gray-50"
+  >
+    <div
+      class="flex flex-grow rounded-lg bg-cover bg-no-repeat bg-right"
+      style="background-image: url('./rain-bg.svg')"
+    >
+      <div class="container flex content-center items-center bg-gray-900/80">
+        <div class="flex flex-col flex-wrap overflow-hidden pl-14">
+          <img
+            class="my-4 drop-shadow-logo w-96"
+            src="https://assets.dev.angarium.io/logo/logo.png"
+          />
+          <h2 class="text-secondary-500 pl-8 text-3xl font-header">
+            Cloud native call quality monitoring and phone testing platform
+          </h2>
+          <h1 class="text-primary-50 pl-8 text-6xl font-header">
+            Helping Hybrid Contact Centres with their voice and call quality
+            problems
+          </h1>
+          <div
+            class="flex flex-grow items-center space-x-4 text-gray-50 justify-end"
+          >
+            <a
+              class="inline-flex flex-wrap justify-center items-center h-12 gap-2 font-semibold no-underline text-secondary-content outline-secondary text-base-content outline-base-content shadow-sm bg-secondary-500 py-2 px-4 rounded"
+              href="/contact-us/"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+                class="h-4 w-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              Contact US</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

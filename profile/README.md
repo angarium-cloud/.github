@@ -11,7 +11,7 @@ What drives us is simple. We're all about being there for our customers, diving 
 
 We're all about community feedback. So, if you use one of our projects, we would love to hear from you.
 
-If you need help with your contact centre call and voice quality issues and need solutions to resolve them quickly, contact us now 👇.
+If you need help with your contact centre call and voice quality issues and need solutions to resolve them quickly, contact us 👇.
 
 <p align="right">
   <a href="https://angarium.io/contact-us/" title="Work with us"><img src="https://img.shields.io/badge/Work_with_us-d62828?style=for-the-badge" alt="Work with us"></a>

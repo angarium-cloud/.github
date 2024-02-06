@@ -1,0 +1,11 @@
+{
+  "name": "Org Repository Banner Workflow",
+  "description": "Generate a banner for the repository using Angarium's banner template.",
+  "iconName": "octicon file-media",
+  "categories": [
+    "Automation"
+  ],
+  "filePatterns": [
+    "README.md"
+  ]
+}

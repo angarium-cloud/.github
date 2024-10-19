@@ -1,4 +1,4 @@
-[![Banner](https://github.com/angarium-cloud/.github/blob/main/profile/banner/image.png?raw=true)](https://angarium.io)
+[![Angarium VoIP and SIP experts](https://github.com/angarium-cloud/.github/blob/main/profile/banner/image.png?raw=true)](https://angarium.io)
 
 # 👋 &nbsp;Hi there
 
@@ -14,5 +14,5 @@ We're all about community feedback. So, if you use one of our projects, we would
 If you need help with your contact centre call and voice quality issues and need solutions to resolve them quickly, contact us 👇.
 
 <p align="right">
-  <a href="https://angarium.io/contact-us/" title="Work with us"><img src="https://img.shields.io/badge/Work_with_us-d62828?style=for-the-badge" alt="Work with us"></a>
+  <a href="https://angarium.io/contact-us/" title="Work with us"><img src="https://img.shields.io/badge/Work_with_us-d62828?style=for-the-badge" alt="Work With VoIP and SIP Experts"></a>
 </p>

@@ -104,7 +104,7 @@ jobs:
           viewportHeight: 320
           omitBackground: true
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v7
         name: Commit artifact
         id: auto-commit
         env:

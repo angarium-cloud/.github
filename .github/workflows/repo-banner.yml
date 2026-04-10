@@ -41,7 +41,7 @@ jobs:
 
       - name: Format Repo Metadata
         id: meta
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           REPOSITORY_NAME: ${{ steps.metadata.outputs.repository_name }}
           REPOSITORY_DESCRIPTION: ${{ steps.metadata.outputs.repository_description }}
